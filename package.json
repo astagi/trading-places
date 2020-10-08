@@ -5,7 +5,8 @@
   "author": "Andrea Stagi <stagi.andrea@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
