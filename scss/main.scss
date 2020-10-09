@@ -1,3 +1,32 @@
 body {
   background-color: aqua;
 }
+
+.tv {
+  max-width: 70%;
+  margin: auto;
+  background: #000;
+  position: relative;
+  border-top: 3px solid #888;
+  padding: 2% 2% 4% 2%;
+  border-radius: 10px;
+  border-bottom-left-radius: 50% 2%;
+  border-bottom-right-radius: 50% 2%;
+  transition: margin-right 1s;
+
+  &__screen {
+    position: relative;
+  }
+
+  &__label {
+    color: white;
+    font-size: 10vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 5px black;
+  }
+}
