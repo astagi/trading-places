@@ -7,9 +7,12 @@
     }
     return Math.floor((xmasEve.getTime() - today.getTime()) / (3600000 * 24))
   };
+  var setDaysLeft = function () {
+    document.querySelector('#daysleft').innerHTML = daysLeft();
+  };
+  setDaysLeft();
   document.getElementById('video').play();
   setInterval(function () {
-    var days = daysLeft();
-    console.log(days)
+    setDaysLeft();
   }, 5000);
 })()
