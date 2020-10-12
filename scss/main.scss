@@ -63,6 +63,9 @@ body {
 
     &__maximize {
       background: yellow;
+      @media (orientation:portrait) {
+        display: none;
+      }
     }
 
     &__off {
@@ -81,5 +84,14 @@ body {
     font-family: Impact, Charcoal, sans-serif;
     text-transform: uppercase;
     -webkit-text-stroke: 5px black;
+  }
+}
+
+.credits {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  &__link {
+    color: white;
   }
 }
