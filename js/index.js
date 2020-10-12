@@ -10,6 +10,15 @@
   var setDaysLeft = function () {
     document.querySelector('#daysleft').innerHTML = daysLeft();
   };
+  document.querySelector('.tv__btn__maximize').onclick = function() {
+    document.querySelector('.tv').classList.toggle('tv--full');
+    document.querySelector('.tv__buttons').classList.toggle('tv__buttons--full');
+    document.querySelector('.tv__screen').classList.toggle('tv__screen--full');
+  }
+  document.querySelector('.tv__btn__off').onclick = function() {
+
+  }
+  feather.replace()
   setDaysLeft();
   document.getElementById('video').play();
   setInterval(function () {
