@@ -2,10 +2,41 @@ body {
   background-color: darkolivegreen;
 }
 
+@keyframes turn_off_on {
+  0%  {
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+  }
+  25% {
+    left: 0%;
+    top: 50%;
+    height: 1%;
+    width: 100%;
+    opacity: 100%;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    width: 1%;
+    height: 1%;
+    opacity: 100%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    width: 1%;
+    height: 1%;
+    opacity: 0%;
+  }
+}
+
 .tv {
   max-width: 70%;
   margin: auto;
-  background: black;
+  background: grey;
   position: relative;
   border-top: 3px solid #888;
   padding: 2% 2% 4% 2%;
@@ -25,6 +56,35 @@ body {
     border-radius: 0px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  &__black {
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &__stripe {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &--on {
+        animation-name: turn_off_on;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+      }
+      &--off {
+        animation-name: turn_off_on;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+      }
+    }
   }
 
   &__screen {
@@ -56,6 +116,10 @@ body {
     text-align: center;
     line-height: 1.5rem;
     padding: 0.2rem;
+
+    &--disabled {
+      pointer-events: none;
+    }
 
     &:active {
       filter: brightness(200%);
@@ -89,6 +153,7 @@ body {
 
 .credits {
   text-align: center;
+  font-size: 1.5rem;
   padding: 1rem;
   color: white;
   &__link {
