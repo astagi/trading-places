@@ -1,3 +1,5 @@
+import "./main.scss"
+
 (function() {
   var tvTurnedOn=true;
   var daysLeft = function () {

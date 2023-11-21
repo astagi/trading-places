@@ -5,12 +5,12 @@ Trading places countdown website.
 ## Build
 
 ```sh
-yarn build
+npm run build
 ```
 
 ## Development
 
 ```sh
-yarn watch
+npm run dev
 ```
 
